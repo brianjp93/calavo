@@ -1,6 +1,6 @@
 {
   "name": "calavo",
-  "homepage": "http://brianjp93.github.io/calavo",
+  // "homepage": "http://brianjp93.github.io/calavo",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
