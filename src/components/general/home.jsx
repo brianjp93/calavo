@@ -28,7 +28,7 @@ function Home(){
                     </span>
                 </div>
                 <img
-                    src="/img/carousel_1.jpg"
+                    src="/static/img/carousel_1.jpg"
                     alt="building from calavo street"
                     style={{width: '100%', marginBottom: 20, borderRadius: 4}}
                     />
