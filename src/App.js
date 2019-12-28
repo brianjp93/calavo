@@ -20,12 +20,6 @@ function App() {
       <div>
         <NavBar />
         <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/users">
-            <Users />
-          </Route>
           <Route path='/contact'>
             <Contact />
           </Route>
@@ -36,14 +30,6 @@ function App() {
       </div>
     </Router>
   );
-}
-
-function About() {
-  return <h2>About</h2>;
-}
-
-function Users() {
-  return <h2>Users</h2>;
 }
 
 function Contact() {
