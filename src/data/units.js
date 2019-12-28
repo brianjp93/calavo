@@ -20,8 +20,8 @@ const unitdata = {
             name: 'c',
             area_in: 2003,
             area_out: null,
-            rent: 1850.00,
-            is_available: true,
+            rent: null,
+            is_available: false,
             notes: null,
         },
         {
@@ -87,7 +87,7 @@ const unitdata = {
             area_in: 3356,
             area_out: 1100,
             rent: null,
-            is_available: true,
+            is_available: false,
             notes: null,
         },
         {
