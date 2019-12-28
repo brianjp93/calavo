@@ -5,6 +5,7 @@ import {
     Table, TableRow, TableHead, TableBody, TableCell, TableContainer, Paper
 } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles';
+import Icon from '@material-ui/core/Icon'
 
 import units from '../../data/units'
 
@@ -33,6 +34,11 @@ function Home(){
                     style={{width: '100%', marginBottom: 20, borderRadius: 4}}
                     />
                 <UnitTable name={'106 Calavo Street'} units={units.calavo106} />
+                <UnitTable name={'108 Calavo Street'} units={units.calavo108} />
+                <UnitTable name={'110 Calavo Street'} units={units.calavo110} />
+                <UnitTable name={'120 Calavo Street'} units={units.calavo120} />
+
+                <div style={{height:50}}></div>
             </Container>
 
         </div>
@@ -42,7 +48,7 @@ function Home(){
 function UnitTable(props) {
     const classes = useStyles()
     return (
-        <Card className={classes.card}>
+        <Card className={classes.card} style={{marginTop:20}}>
             <div style={{textAlign: 'center'}}>
                 <div style={{display: 'inline-block', width: '90%', textAlign: 'left'}}>
                     <div>
@@ -97,7 +103,12 @@ function UnitRow(props) {
                 {unit.rent}
             </TableCell>
             <TableCell>
-                {unit.is_available}
+                {unit.is_available &&
+                    <Icon style={{color: 'green'}}>check_circle</Icon>
+                }
+                {!unit.is_available &&
+                    <Icon style={{color: 'darkred'}}>cancel</Icon>
+                }
             </TableCell>
             <TableCell>
                 {unit.notes}
