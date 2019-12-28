@@ -2,7 +2,7 @@ import React from 'react'
 import {
     Card,
     Container,
-    Table, TableRow, TableHead, TableBody, TableCell, TableContainer, Paper
+    Table, TableRow, TableHead, TableBody, TableCell
 } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles';
 import Icon from '@material-ui/core/Icon'
