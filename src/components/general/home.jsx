@@ -115,6 +115,7 @@ function UnitTable(props) {
                         </Table>
                 </div>
                 
+                <div style={{height: 20}}></div>
             </div>
         </Card>
     )
