@@ -27,7 +27,7 @@ function Home(){
                             fontFamily: 'Fredericka the Great',
                             fontSize: 60,
                         }}>
-                        Calavo Street Industrial
+                        Calavo Street Properties
                     </span>
 
                     <div>
