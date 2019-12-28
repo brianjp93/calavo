@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react'
+import React from 'react'
 import {
     Card,
     Container,
@@ -11,6 +11,13 @@ import numeral from 'numeral'
 import units from '../../data/units'
 
 function Home(){
+    const unit_names = ['calavo106', 'calavo108', 'calavo110', 'calavo120']
+
+    const all_units = []
+    for (let unit_name of unit_names) {
+        all_units.push(...units[unit_name])
+    }
+    const avail = all_units.filter(x => x.is_available).length
     return (
         <div>
             <Container maxWidth='lg'>
@@ -32,6 +39,10 @@ function Home(){
                                 110 S Calavo St, Santa Paula, CA 93060
                             </a>
                         </span>
+                    </div>
+
+                    <div style={{fontStyle: 'italic', paddingTop: 5}}>
+                        There are currently {avail} available units.
                     </div>
                 </div>
                 <img
@@ -55,7 +66,7 @@ function UnitTable(props) {
     const classes = useStyles()
     const units = props.units
 
-    const avail = units.filter((x) => x.is_available).length
+    const avail = units.filter(x => x.is_available).length
     const chip_color = avail ? 'lightgreen': 'lightgrey'
     return (
         <Card className={classes.card} style={{marginTop:20}}>
@@ -142,7 +153,7 @@ function UnitRow(props) {
                     <Icon style={{color: 'green'}}>check_circle</Icon>
                 }
                 {!unit.is_available &&
-                    <Icon style={{color: 'darkred'}}>cancel</Icon>
+                    <Icon style={{color: 'grey'}}>cancel</Icon>
                 }
             </TableCell>
             <TableCell>
