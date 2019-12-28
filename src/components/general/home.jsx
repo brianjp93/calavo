@@ -27,6 +27,16 @@ function Home(){
                         }}>
                         Calavo Street Industrial
                     </span>
+
+                    <div>
+                        <span>
+                            <a
+                                target='_blank'
+                                href="https://www.google.com/maps/place/110+S+Calavo+St,+Santa+Paula,+CA+93060/@34.3399911,-119.0894452,17.42z/data=!4m5!3m4!1s0x80e9b50124bf64c5:0x90bad8b3f389389e!8m2!3d34.3400851!4d-119.0877226">
+                                110 S Calavo St, Santa Paula, CA 93060
+                            </a>
+                        </span>
+                    </div>
                 </div>
                 <img
                     src="/static/img/carousel_1.jpg"
