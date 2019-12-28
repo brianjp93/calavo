@@ -1,4 +1,4 @@
-const unitdata = {
+const units = {
     calavo106: [
         {
             name: 'a',
@@ -217,4 +217,4 @@ const unitdata = {
     ]
 }
 
-export default unitdata
+export default units

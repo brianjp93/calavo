@@ -1,19 +1,14 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import {
     Card,
     Container,
     Table, TableRow, TableHead, TableBody, TableCell
 } from '@material-ui/core'
-import { makeStyles } from '@material-ui/core/styles';
 import Icon from '@material-ui/core/Icon'
+import useStyles from '../../mystyle'
+import numeral from 'numeral'
 
 import units from '../../data/units'
-
-const useStyles = makeStyles({
-    card: {
-        boxShadow: '0px 3px 2px -3px rgba(0,0,0,.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.2)',
-    }
-})
 
 function Home(){
     return (
@@ -112,6 +107,20 @@ function UnitTable(props) {
     )
 }
 
+function fmoney(n) {
+    if (n) {
+        return numeral(n).format('0,0.00')
+    }
+    return '-'
+}
+
+function fnum(n) {
+    if (n) {
+        return numeral(n).format('0,0')
+    }
+    return '-'
+}
+
 function UnitRow(props) {
     const unit = props.unit
     return (
@@ -120,13 +129,13 @@ function UnitRow(props) {
                 {unit.name.toUpperCase()}
             </TableCell>
             <TableCell>
-                {unit.area_in}
+                {fnum(unit.area_in)}
             </TableCell>
             <TableCell>
-                {unit.area_out}
+                {fnum(unit.area_out)}
             </TableCell>
             <TableCell>
-                {unit.rent}
+                {fmoney(unit.rent)}
             </TableCell>
             <TableCell>
                 {unit.is_available &&

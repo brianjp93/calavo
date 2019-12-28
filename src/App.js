@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 
 import {Container, Card, Icon} from '@material-ui/core'
+import useStyles from './mystyle'
 
 import Home from './components/general/home'
 import NavBar from './components/general/navbar'
@@ -18,9 +19,6 @@ function App() {
     <Router>
       <div>
         <NavBar />
-
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
         <Switch>
           <Route path="/about">
             <About />
@@ -49,11 +47,12 @@ function Users() {
 }
 
 function Contact() {
+  const classes = useStyles()
   return (
     <div style={{paddingTop: 30}}>
 
       <Container maxWidth='sm'>
-        <Card>
+        <Card className={classes.card}>
           <div style={{textAlign: 'center'}}>
             <div style={{width: '90%', display: 'inline-block', textAlign: 'left'}}>
               <div>
@@ -82,10 +81,8 @@ function Contact() {
         </iframe>
       </Container>
 
-
     </div>
   )
 }
 
 export default App;
-
