@@ -47,6 +47,10 @@ function Home(){
 
 function UnitTable(props) {
     const classes = useStyles()
+    const units = props.units
+
+    const avail = units.filter((x) => x.is_available).length
+    const chip_color = avail ? 'lightgreen': 'lightgrey'
     return (
         <Card className={classes.card} style={{marginTop:20}}>
             <div style={{textAlign: 'center'}}>
@@ -59,6 +63,17 @@ function UnitTable(props) {
                             display: 'inline-block'
                         }}>
                             {props.name}
+                        </div>
+                        <div
+                            style={{
+                                display: 'inline-block',
+                                borderRadius: 7,
+                                background: chip_color,
+                                padding: '3px 8px',
+                                verticalAlign: 'text-bottom',
+                                marginLeft: 15,
+                            }}>
+                            {avail} Available
                         </div>
                     </div>
 
