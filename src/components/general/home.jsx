@@ -69,7 +69,9 @@ function UnitTable(props) {
     const avail = units.filter(x => x.is_available).length
     const chip_color = avail ? 'lightgreen': 'lightgrey'
     return (
-        <Card className={classes.card} style={{marginTop:20}}>
+        <Card
+            className={classes.card}
+            style={{marginTop:20, overflowX: 'scroll'}}>
             <div style={{textAlign: 'center'}}>
                 <div style={{display: 'inline-block', width: '90%', textAlign: 'left'}}>
                     <div>
