@@ -42,7 +42,7 @@ function Home(){
                     </div>
 
                     <div style={{fontStyle: 'italic', paddingTop: 5}}>
-                        There are currently {avail} available units.
+                        Available Units: {avail}
                     </div>
                 </div>
                 <img
