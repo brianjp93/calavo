@@ -1,4 +1,4 @@
-# [calavo.now.sh](https://calavo.now.sh)
+# [calavostreetindustrial.com](https://calavostreetindustrial.com)
 
 This site contains general data about the pricing and
 availability of the properties at S Calavo Street,

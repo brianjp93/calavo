@@ -71,7 +71,7 @@ function UnitTable(props) {
     return (
         <Card
             className={classes.card}
-            style={{marginTop:20, overflowX: 'scroll'}}>
+            style={{marginTop:20, overflowX: 'auto'}}>
             <div style={{textAlign: 'center'}}>
                 <div style={{display: 'inline-block', width: '90%', textAlign: 'left'}}>
                     <div>
